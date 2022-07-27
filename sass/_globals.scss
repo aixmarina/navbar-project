@@ -1,0 +1,144 @@
+//fonts 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&family=Playfair+Display:wght@600&display=swap');
+
+//variables 
+$color-blue-1: #BEE3DB;
+$color-blue-2: #89B0AE;
+$color-grey: #555B6E;
+$color-whiteish: #FAF9F9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: $color-blue-1;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: $color-grey;
+    letter-spacing: 0.1rem;
+    text-shadow: 1px 2px 2px $color-blue-2;
+    padding-left: 0.5rem;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .nav-toggle {
+            font-size: 1.5rem;
+            color: $color-blue-2;
+            background: transparent;
+            border-color: transparent;
+            transition: all 0.3s linear;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-grey;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .links {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s linear;
+
+        a {
+            color: $color-blue-2;
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            display: block;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-color: $color-blue-1;
+                color: $color-grey;
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+    .show-links {
+        height: 179.219px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .nav-header {
+            padding: 0;
+
+            .nav-toggle {
+                display: none;
+            }
+        }
+
+        .links {
+            height: auto; //important one
+            display: flex;
+            gap: 0.8rem;
+
+            a {
+                padding: 0;
+                margin: 0 0.5rem;
+
+                &:hover {
+                    padding: 0;
+                    background: transparent;
+                }
+            }
+        }
+
+        .social-icons {
+            display: flex;
+
+            a {
+                margin: 0 0.5rem;
+                color: $color-grey;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: $color-blue-2;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&family=Playfair+Display:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #BEE3DB;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: #555B6E;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 2px 2px #89B0AE;
+  padding-left: 0.5rem;
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+nav .nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav .nav-header .nav-toggle {
+  font-size: 1.5rem;
+  color: #89B0AE;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+nav .nav-header .nav-toggle:hover {
+  color: #555B6E;
+  transform: rotate(90deg);
+}
+nav .links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+nav .links a {
+  color: #89B0AE;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s linear;
+}
+nav .links a:hover {
+  background-color: #BEE3DB;
+  color: #555B6E;
+  padding-left: 2.5rem;
+}
+nav .show-links {
+  height: 179.219px;
+}
+nav .social-icons {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-center .nav-header {
+    padding: 0;
+  }
+  .nav-center .nav-header .nav-toggle {
+    display: none;
+  }
+  .nav-center .links {
+    height: auto;
+    display: flex;
+    gap: 0.8rem;
+  }
+  .nav-center .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .nav-center .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .nav-center .social-icons {
+    display: flex;
+  }
+  .nav-center .social-icons a {
+    margin: 0 0.5rem;
+    color: #555B6E;
+    transition: all 0.3s linear;
+  }
+  .nav-center .social-icons a:hover {
+    color: #89B0AE;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
